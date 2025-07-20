@@ -2,67 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>7 Fallacies of Generative AI</title>
+  <title>The 7 Fallacies in Gen AI</title>
   <style>
     body {
       font-family: sans-serif;
-      margin: 2rem;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
       line-height: 1.6;
+      color: #333;
     }
     h1 {
-      color: #2a2a2a;
+      color: #222;
+      font-size: 2rem;
     }
     .fallacy {
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
     }
-    .title {
+    .fallacy-title {
       font-weight: bold;
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+      color: #0057b8;
+    }
+    .example {
+      font-style: italic;
+      color: #555;
+      margin-top: 0.5rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ddd;
+      font-size: 0.9rem;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <h1>The 7 Fallacies of Generative AI / LLM-Based Automation</h1>
+  <h1>The 7 Fallacies in Gen AI</h1>
 
   <div class="fallacy">
-    <div class="title">1. “One-Shot Generation” Fallacy</div>
-    <div>Assumes that a single LLM call can produce a complete, correct, and contextually accurate output without the need for iterative refinement or multi-turn reasoning.</div>
+    <div class="fallacy-title">1. One-shot generation</div>
+    <div>
+      This fallacy assumes that a single call to a generative AI model can produce complete, accurate, and usable output. It overlooks the importance of iterative refinement, feedback loops, or multi-turn reasoning to improve quality and correctness.
+      <div class="example">Example: Asking an LLM to generate a production-ready flow from just a high-level title, expecting no bugs or missing steps.</div>
+    </div>
   </div>
 
   <div class="fallacy">
-    <div class="title">2. “Speed Over Substance” Fallacy</div>
-    <div>Prioritizes generation speed at the cost of depth, contextual accuracy, or validation, leading to outputs that may be fast but flawed.</div>
+    <div class="fallacy-title">2. Speed over substance</div>
+    <div>
+      Prioritizing fast response times can compromise depth, accuracy, or alignment with intent. Speed may impress, but without substance, the output often requires rework or manual correction.
+      <div class="example">Example: Generating a task automation flow in under 2 seconds that skips required validations or roles, leading to operational errors.</div>
+    </div>
   </div>
 
   <div class="fallacy">
-    <div class="title">3. “Zero Preprocessing” Fallacy</div>
-    <div>Neglects the importance of prework—such as summarization, embedding, or indexing—assuming the model can operate optimally without structured context or grounding.</div>
+    <div class="fallacy-title">3. Zero preprocessing</div>
+    <div>
+      This fallacy ignores the need for preparing structured context, summaries, or embeddings before using Gen AI. It assumes the model knows enough from raw or incomplete inputs, which often leads to shallow results.
+      <div class="example">Example: Running flow generation without first summarizing related subflows and actions available in the system.</div>
+    </div>
   </div>
 
   <div class="fallacy">
-    <div class="title">4. “Minimal Input Sufficiency” Fallacy</div>
-    <div>Assumes that terse inputs (like function or action names) are enough for the LLM to generate meaningful outputs, ignoring the need for rich semantics, descriptions, or relational context.</div>
+    <div class="fallacy-title">4. Minimal input sufficiency</div>
+    <div>
+      Believing that minimal prompts like function names or keywords are enough can lead to vague or wrong outputs. Gen AI benefits greatly from detailed semantics, relationships, and use case context.
+      <div class="example">Example: Expecting the phrase "process user request" to generate a complete flow without describing user types or request types.</div>
+    </div>
   </div>
 
   <div class="fallacy">
-    <div class="title">5. “No Reasoning Needed” Fallacy</div>
-    <div>Disregards the importance of intermediate reasoning steps, planning, or tool-use scaffolding, expecting direct answers from LLMs without verifying the logic behind them.</div>
+    <div class="fallacy-title">5. No reasoning needed</div>
+    <div>
+      Skipping intermediate reasoning steps assumes that the LLM can jump from problem to solution directly. In reality, breaking down tasks, planning, and chaining logic improves output quality.
+      <div class="example">Example: Asking a bot to recommend a workflow change without analyzing current inefficiencies or dependencies first.</div>
+    </div>
   </div>
 
   <div class="fallacy">
-    <div class="title">6. “Prompt Has All the Answers” Fallacy</div>
-    <div>Overestimates the completeness and clarity of user prompts, assuming they contain everything needed for accurate generation, without needing clarification, context expansion, or additional data fetching.</div>
+    <div class="fallacy-title">6. Prompt has all the answers</div>
+    <div>
+      Relying solely on user prompts assumes they contain all the required clarity and detail. This fallacy overlooks ambiguity, missing information, and the need to fetch or infer additional context.
+      <div class="example">Example: A vague prompt like “optimize employee onboarding” without knowing the current process steps or metrics.</div>
+    </div>
   </div>
 
   <div class="fallacy">
-    <div class="title">7. “Post-Generation Checks Are Optional” Fallacy</div>
-    <div>Ignores the necessity of validating the output for correctness, alignment with intent, or consistency, assuming LLMs are inherently reliable without guardrails.</div>
+    <div class="fallacy-title">7. Post-generation checks are optional</div>
+    <div>
+      Assuming LLM outputs are inherently trustworthy leads to skipping validation, testing, or human-in-the-loop review. Guardrails and review mechanisms are critical to avoid silent failures.
+      <div class="example">Example: Deploying a Gen AI-generated flow to production without testing edge cases or verifying role access controls.</div>
+    </div>
   </div>
 
   <footer>
-    <hr />
-    <p>Visit <a href="https://krishnachaitanya366.com">krishnachaitanya366.com</a> for more insights</p>
+    <p>Curated by <a href="https://krishnachaitanya366.com" target="_blank">krishnachaitanya366.com</a> • © 2025</p>
   </footer>
 </body>
 </html>
